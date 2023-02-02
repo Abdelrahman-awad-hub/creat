@@ -1,0 +1,16 @@
+@import "./abstracts/variables";
+@import "./abstracts/functions";
+@import "./abstracts/variables";
+
+@import "./sass/layout/header";
+@import "./sass/layout/footer";
+@import "./sass/layout/forms";
+@import "./sass/layout/global-rulse";
+
+@import "./components/buttons";
+@import "./components/carousel";
+@import "./components/slider";
+
+@import "./sass/pages/home";
+@import "./sass/pages/about";
+@import "./sass/pages/contact";

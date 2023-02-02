@@ -1,0 +1,176 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Dosis", Sans-serif;
+  direction: ltr;
+}
+
+a,
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+.open {
+  transform: translate(100%, -14px);
+}
+
+.home {
+  background-image: url(https://gentium.pixerex.com/clean/wp-content/uploads/sites/7/2019/05/hero.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+header {
+  width: 100%;
+  border-bottom: 2px solid #9999;
+  position: relative;
+}
+header.bg-normal {
+  background-color: #000000a6;
+}
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+}
+header nav .media {
+  display: flex;
+  padding: 10px;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 0;
+  cursor: pointer;
+}
+header nav .media li {
+  color: #fff;
+  list-style: none;
+}
+header nav .links {
+  display: flex;
+  padding: 10px;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 0;
+}
+header nav .links li {
+  list-style: none;
+  padding-right: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  line-height: 2;
+  text-transform: capitalize;
+  letter-spacing: 1.7px;
+  transition: color 0.5s;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+header nav .links li::before {
+  content: "";
+  width: 50%;
+  height: 3px;
+  background-color: #e9204f;
+  transition: right 0.5s;
+  position: absolute;
+  bottom: 0;
+  right: 100%;
+}
+header nav .links li:not(.active):hover::before {
+  right: 50%;
+}
+header nav .links li a {
+  padding: 10px 0;
+  transition: color 0.5s;
+}
+
+@media (min-width: 0px) {
+  header {
+    height: 90px;
+    background-color: #000000 !important;
+    border: none;
+    padding: 20px 0;
+  }
+  header nav .links {
+    width: 100%;
+    background-color: #000000;
+    padding: 20px;
+    transition: color 0.2s;
+    position: absolute;
+    top: 100%;
+    height: calc(100vh - 90px);
+    z-index: 9;
+    transition: transform 0.3s;
+  }
+  header nav .links a {
+    font-size: 25px;
+  }
+  header nav svg {
+    cursor: pointer;
+  }
+}
+@media (min-width: 992px) {
+  header {
+    background-color: rgba(0, 0, 0, 0.5019607843);
+    border-bottom: 2px solid #9999;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    transition: all ease-in-out 0.2s;
+  }
+  header.transparent {
+    background-color: transparent !important;
+  }
+  header nav {
+    background-color: transparent;
+    width: auto;
+    align-items: center;
+    justify-content: center;
+  }
+  header nav .links {
+    width: 100%;
+    position: static;
+    background-color: transparent;
+    height: auto;
+    transform: translate(0, 0);
+    transition: 0.1ms;
+  }
+  header nav .links a {
+    font-size: 1.2rem;
+  }
+}
+.landing {
+  height: 100vh;
+  background-color: #00000080;
+}
+.landing h2 {
+  font-weight: bold;
+  color: #fff;
+  animation: backInUp 600ms ease-in-out 1;
+  font-size: 40px;
+  margin-bottom: 5rem;
+}
+
+@keyframes backInUp {
+  0% {
+    transform: translateY(300%);
+    opacity: 0;
+  }
+  90% {
+    transform: translateY(-50px);
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}

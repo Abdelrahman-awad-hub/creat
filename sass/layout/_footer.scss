@@ -1,0 +1,38 @@
+@use "./global-rulse";
+@import "../../abstracts/variables";
+
+footer {
+    background-color: $dark-color;
+    ul {
+        list-style: none;
+        color: #fff;
+    }
+    span {
+        cursor: pointer;
+    }
+}
+
+li {
+    color: #fff;
+    list-style: none;
+    transition: color 0.5s;
+    cursor: pointer;
+    padding: 10px 0;
+    position: relative;
+    overflow: hidden;
+    &::before {
+        content: "";
+        width: 50%;
+        height: 3px;
+        background-color: #e9204f;
+        transition: right 0.5s;
+        position: absolute;
+        bottom: 0;
+        right: 100%;
+    }
+    &:not(.active):hover {
+        &::before {
+            right: 50%;
+        }
+    }
+}

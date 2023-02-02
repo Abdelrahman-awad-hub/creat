@@ -1,0 +1,166 @@
+@use "./global-rulse";
+@import "../../abstracts/variables";
+@import "../../abstracts/mixins";
+
+.home {
+    background-image: url(https://gentium.pixerex.com/clean/wp-content/uploads/sites/7/2019/05/hero.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+header {
+    width: 100%;
+    border-bottom: 2px solid #9999;
+
+    position: relative;
+    &.bg-normal {
+        background-color: #000000a6;
+    }
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: transparent;
+        .media {
+            display: flex;
+            padding: 10px;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 0;
+            cursor: pointer;
+            li {
+                color: #fff;
+                list-style: none;
+            }
+        }
+        .links {
+            display: flex;
+            padding: 10px;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 0;
+            li {
+                list-style: none;
+                padding-right: 10px;
+                font-size: 1rem;
+                font-weight: bold;
+                color: #fff;
+                line-height: 2;
+                text-transform: capitalize;
+                letter-spacing: 1.7px;
+                transition: color 0.5s;
+                cursor: pointer;
+                position: relative;
+                overflow: hidden;
+                &::before {
+                    content: "";
+                    width: 50%;
+                    height: 3px;
+                    background-color: #e9204f;
+                    transition: right 0.5s;
+                    position: absolute;
+                    bottom: 0;
+                    right: 100%;
+                }
+                &:not(.active):hover {
+                    &::before {
+                        right: 50%;
+                    }
+                }
+                a {
+                    padding: 10px 0;
+                    transition: color 0.5s;
+                }
+            }
+        }
+    }
+}
+
+@include breakpoint() {
+    header {
+        height: 90px;
+        background-color: $dark-color !important;
+        border: none;
+        padding: 20px 0;
+
+        nav {
+            .links {
+                width: 100%;
+                background-color: $dark-color;
+                padding: 20px;
+                transition: color 0.2s;
+                position: absolute;
+                top: 100%;
+                height: calc(100vh - 90px);
+                z-index: 9;
+                transition: transform 0.3s;
+                a {
+                    font-size: 25px;
+                }
+            }
+            svg {
+                cursor: pointer;
+            }
+        }
+    }
+}
+@include breakpoint(lg) {
+    header {
+        background-color: rgba(0, 0, 0, 0.5019607843);
+        border-bottom: 2px solid #9999;
+        height: auto;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        transition: all ease-in-out 0.2s;
+        &.transparent {
+            background-color: transparent !important;
+        }
+        nav {
+            background-color: transparent;
+            width: auto;
+            align-items: center;
+            justify-content: center;
+
+            .links {
+                width: 100%;
+                position: static;
+                background-color: transparent;
+                height: auto;
+                transform: translate(0, 0);
+                transition: 0.1ms;
+                a {
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+}
+
+.landing {
+    height: 100vh;
+    background-color: #00000080;
+
+    h2 {
+        font-weight: bold;
+        color: #fff;
+        animation: backInUp 600ms ease-in-out 1;
+        font-size: 40px;
+        margin-bottom: 5rem;
+    }
+}
+
+@keyframes backInUp {
+    0% {
+        transform: translateY(300%);
+        opacity: 0;
+    }
+    90% {
+        transform: translateY(-50px);
+    }
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}

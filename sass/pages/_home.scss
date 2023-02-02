@@ -1,0 +1,122 @@
+@use "../layout/global-rulse";
+@import "../../abstracts/variables";
+// start portfolio section
+
+.portfolio {
+    .title {
+        h3 {
+            color: $main-color;
+        }
+    }
+    .projectCard {
+        overflow: hidden;
+        position: relative;
+        padding: 0 !important;
+        cursor: pointer;
+        height: 350px;
+        z-index: 1;
+        border : {
+            bottom: 10px solid #fff;
+            right: 10px solid #fff;
+        }
+        Img {
+            transition: transform 1s;
+            object-fit: cover;
+            width: 100%;
+            height: 350px;
+        }
+        .caption {
+            background-color: rgba(0, 0, 0, 0.5490196078);
+            position: absolute !important;
+            height: 100%;
+            right: 100%;
+            top: 0;
+            width: 100%;
+            transition: right 1s;
+        }
+        &:hover {
+            img {
+                transform: scale(1.2);
+            }
+
+            .caption {
+                right: 0;
+            }
+        }
+    }
+}
+
+// End portfolio section
+
+// Start features section
+
+.features {
+    .title {
+        h3 {
+            color: $main-color;
+        }
+    }
+    .cards {
+        .featureCard {
+            box-sizing: content-box;
+            border: 1px solid #9999;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2.5rem 0;
+            padding : {
+                right: 0;
+                left: 0;
+            }
+            cursor: pointer;
+            transition: border 1s, height 1s;
+            overflow: hidden;
+            .info {
+                transition: transform 1s;
+                .shape {
+                    font-size: 70px !important;
+                    margin-bottom: 2rem;
+                    transition: color 1s;
+                }
+            }
+            .arrow {
+                transform: translate(0, 320%);
+                transition: transform 1s;
+                font-size: 1.5rem;
+                color: $main-color !important;
+            }
+            &:hover {
+                & {
+                    border: 1px solid $main-color;
+                    .info {
+                        transform: translateY(-20px);
+                        .shape {
+                            color: $main-color;
+                        }
+                    }
+                    .arrow {
+                        transform: translate(0, 0);
+                    }
+                }
+            }
+        }
+    }
+}
+
+// End features section
+
+// start contact section
+
+.contact {
+    background-image: url(../../image/contact.jpg);
+    background-position: center center;
+    background-size: cover;
+    .overlay {
+        width: 100%;
+        height: 100%;
+        background-color: #000000c2;
+    }
+}
+
+// End contact section
