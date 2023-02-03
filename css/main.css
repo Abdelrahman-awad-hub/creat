@@ -35,6 +35,7 @@ header {
 }
 header.bg-normal {
   background-color: rgba(0, 0, 0, 0.6509803922);
+  border: none;
 }
 header nav {
   display: flex;
@@ -84,6 +85,10 @@ header nav .links li::before {
   position: absolute;
   bottom: 0;
   right: 100%;
+}
+header nav .links li.active::before {
+  bottom: 0;
+  right: 50%;
 }
 header nav .links li:not(.active):hover::before {
   right: 50%;
@@ -136,6 +141,7 @@ header nav .links li a {
     width: auto;
     align-items: center;
     justify-content: center;
+    height: 90px;
   }
   header nav .links {
     width: 100%;
@@ -343,9 +349,63 @@ a:active {
   transform: translate(100%, -14px);
 }
 
-.portfolio .title h3 {
+.mySwiper {
+  width: 100%;
+}
+.mySwiper .swiper-wrapper {
+  padding: 10px 0;
+}
+.mySwiper .swiper-wrapper .swiper-slide {
+  padding: 0 !important;
+  border-radius: 10px !important;
+  box-shadow: 0px 0px 10px #645b5d;
+  margin-bottom: 40px;
+  overflow: hidden;
+}
+.mySwiper .swiper-wrapper .swiper-slide h3 {
+  color: #e9204f;
+  font-weight: bold;
+}
+.mySwiper .swiper-wrapper .swiper-slide .photo {
+  overflow: hidden;
+}
+.mySwiper .swiper-wrapper .swiper-slide .photo img {
+  transition: transform 0.5s ease-in-out;
+}
+.mySwiper .swiper-wrapper .swiper-slide:hover img {
+  transform: scale(1.1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Dosis", Sans-serif;
+  direction: ltr;
+}
+
+a,
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+.open {
+  transform: translate(100%, -14px);
+}
+
+section .title {
+  text-align: center;
+}
+section .title h3 {
   color: #e9204f;
 }
+
 .portfolio .projectCard {
   overflow: hidden;
   position: relative;
@@ -378,9 +438,6 @@ a:active {
   right: 0;
 }
 
-.features .title h3 {
-  color: #e9204f;
-}
 .features .cards .featureCard {
   box-sizing: content-box;
   border: 1px solid rgba(153, 153, 153, 0.6);
@@ -423,7 +480,7 @@ a:active {
 }
 
 .contact {
-  background-image: url(../../image/contact.jpg);
+  background-image: url(https://gentium.pixerex.com/clean/wp-content/uploads/sites/7/2019/01/footer-bg-1.jpg) !important;
   background-position: center center;
   background-size: cover;
 }
