@@ -2,12 +2,16 @@
 @import "../../abstracts/variables";
 // start portfolio section
 
-.portfolio {
+section {
     .title {
+        text-align: center;
         h3 {
             color: $main-color;
         }
     }
+}
+
+.portfolio {
     .projectCard {
         overflow: hidden;
         position: relative;
@@ -51,11 +55,6 @@
 // Start features section
 
 .features {
-    .title {
-        h3 {
-            color: $main-color;
-        }
-    }
     .cards {
         .featureCard {
             box-sizing: content-box;
@@ -109,7 +108,7 @@
 // start contact section
 
 .contact {
-    background-image: url(../../image/contact.jpg);
+    background-image: url(https://gentium.pixerex.com/clean/wp-content/uploads/sites/7/2019/01/footer-bg-1.jpg) !important;
     background-position: center center;
     background-size: cover;
     .overlay {
