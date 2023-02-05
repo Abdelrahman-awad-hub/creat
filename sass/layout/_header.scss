@@ -2,17 +2,9 @@
 @import "../../abstracts/variables";
 @import "../../abstracts/mixins";
 
-.home {
-    background-image: url(https://gentium.pixerex.com/clean/wp-content/uploads/sites/7/2019/05/hero.jpg);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-}
-
 header {
     width: 100%;
     border-bottom: 2px solid #9999;
-
     position: relative;
     &.bg-normal {
         background-color: #000000a6;
@@ -90,7 +82,6 @@ header {
         background-color: $dark-color !important;
         border: none;
         padding: 20px 0;
-
         nav {
             .links {
                 width: 100%;
@@ -145,29 +136,7 @@ header {
     }
 }
 
-.landing {
-    height: 100vh;
-    background-color: #00000080;
-
-    h2 {
-        font-weight: bold;
-        color: #fff;
-        animation: backInUp 600ms ease-in-out 1;
-        font-size: 40px;
-        margin-bottom: 5rem;
-    }
-}
-
-@keyframes backInUp {
-    0% {
-        transform: translateY(300%);
-        opacity: 0;
-    }
-    90% {
-        transform: translateY(-50px);
-    }
-    100% {
-        transform: translateY(0%);
-        opacity: 1;
-    }
+//  for the navbar botton
+.open {
+    transform: translate(100%, -14px);
 }

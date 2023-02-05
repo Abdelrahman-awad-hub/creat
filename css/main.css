@@ -17,17 +17,6 @@ a:active {
   color: inherit;
 }
 
-.open {
-  transform: translate(100%, -14px);
-}
-
-.home {
-  background-image: url(https://gentium.pixerex.com/clean/wp-content/uploads/sites/7/2019/05/hero.jpg);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-}
-
 header {
   width: 100%;
   border-bottom: 2px solid rgba(153, 153, 153, 0.6);
@@ -155,31 +144,10 @@ header nav .links li a {
     font-size: 1.2rem;
   }
 }
-.landing {
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.5019607843);
-}
-.landing h2 {
-  font-weight: bold;
-  color: #fff;
-  animation: backInUp 600ms ease-in-out 1;
-  font-size: 40px;
-  margin-bottom: 5rem;
+.open {
+  transform: translate(100%, -14px);
 }
 
-@keyframes backInUp {
-  0% {
-    transform: translateY(300%);
-    opacity: 0;
-  }
-  90% {
-    transform: translateY(-50px);
-  }
-  100% {
-    transform: translateY(0%);
-    opacity: 1;
-  }
-}
 * {
   margin: 0;
   padding: 0;
@@ -197,10 +165,6 @@ a:focus,
 a:active {
   text-decoration: none;
   color: inherit;
-}
-
-.open {
-  transform: translate(100%, -14px);
 }
 
 footer {
@@ -256,8 +220,53 @@ a:active {
   color: inherit;
 }
 
-.open {
-  transform: translate(100%, -14px);
+#letsTalk {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+}
+#letsTalk .header h2 {
+  width: 80%;
+}
+#letsTalk .header #formBtn {
+  cursor: pointer;
+  padding: 20px;
+}
+#letsTalk form label {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+#letsTalk form label::after {
+  content: "*";
+  color: #e9204f;
+  position: relative;
+  top: 3px;
+  left: 2px;
+}
+#letsTalk form input,
+#letsTalk form select,
+#letsTalk form textarea {
+  margin: 1rem 0;
+  padding: 15px;
+  border-radius: 3px;
+  border: 1px solid #d6d5d5;
+  outline: none;
+}
+#letsTalk form input:focus,
+#letsTalk form select:focus,
+#letsTalk form textarea:focus {
+  border: 1px solid #e9204f;
+}
+#letsTalk form textarea {
+  resize: none;
+}
+
+.close {
+  display: none !important;
+}
+
+.openForm {
+  display: flex;
 }
 
 * {
@@ -279,8 +288,23 @@ a:active {
   color: inherit;
 }
 
-.open {
-  transform: translate(100%, -14px);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Dosis", Sans-serif;
+  direction: ltr;
+}
+
+a,
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+  color: inherit;
 }
 
 .main-btn {
@@ -345,8 +369,67 @@ a:active {
   color: inherit;
 }
 
-.open {
-  transform: translate(100%, -14px);
+#loader {
+  background-color: #000;
+  position: relative;
+  z-index: 999999999;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loder {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  box-shadow: 0px 4px 0px #e9204f;
+  background: transparent;
+  animation: loder 0.5s linear infinite;
+}
+
+.tex {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  color: #eee;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  line-height: 200px;
+  font-size: 2em;
+  background: transparent;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes loder {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Dosis", Sans-serif;
+  direction: ltr;
+}
+
+a,
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+  color: inherit;
 }
 
 .mySwiper {
@@ -375,6 +458,9 @@ a:active {
 .mySwiper .swiper-wrapper .swiper-slide:hover img {
   transform: scale(1.1);
 }
+.mySwiper .swiper-pagination span {
+  background-color: #e9204f;
+}
 
 * {
   margin: 0;
@@ -395,10 +481,6 @@ a:active {
   color: inherit;
 }
 
-.open {
-  transform: translate(100%, -14px);
-}
-
 section .title {
   text-align: center;
 }
@@ -406,6 +488,37 @@ section .title h3 {
   color: #e9204f;
 }
 
+.home {
+  background-image: url(https://gentium.pixerex.com/clean/wp-content/uploads/sites/7/2019/05/hero.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+.home .landing {
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5019607843);
+}
+.home .landing h2 {
+  font-weight: bold;
+  color: #fff;
+  animation: backInUp 600ms ease-in-out 1;
+  font-size: 40px;
+  margin-bottom: 4rem;
+}
+
+@keyframes backInUp {
+  0% {
+    transform: translateY(300%);
+    opacity: 0;
+  }
+  90% {
+    transform: translateY(-50px);
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
 .portfolio .projectCard {
   overflow: hidden;
   position: relative;
@@ -436,6 +549,79 @@ section .title h3 {
 }
 .portfolio .projectCard:hover .caption {
   right: 0;
+}
+
+.comments {
+  background-image: url(https://gentium.pixerex.com/clean/wp-content/uploads/sites/7/2019/01/09-min.jpg);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.comments .content {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.comments .content .swiper-slide {
+  width: 100% !important;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0;
+  margin-bottom: 20px;
+}
+.comments .content .swiper-slide .info {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.comments .content .swiper-slide .info img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  object-fit: cover;
+}
+.comments .content .swiper-slide .info h3 {
+  color: #fff;
+  font-size: 19px;
+}
+.comments .content .swiper-slide .info h4 {
+  color: #e9204f;
+  font-size: 15px;
+}
+.comments .content .swiper-slide p {
+  width: 60%;
+  padding: 10px 15px;
+  font-size: 18px;
+  text-transform: capitalize;
+  line-height: 2rem;
+  letter-spacing: 2px;
+  color: #c7c7c7;
+  font-weight: bold;
+  text-align: center;
+}
+@media (min-width: 0px) {
+  .comments .content .swiper-slide p {
+    width: 100%;
+  }
+}
+@media (min-width: 768px) {
+  .comments .content .swiper-slide p {
+    width: 60%;
+  }
+}
+.comments .content .swiper-pagination span {
+  width: 10px;
+  height: 10px;
+  background-color: #e9204f;
 }
 
 .features .cards .featureCard {

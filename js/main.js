@@ -1,5 +1,16 @@
-// navbar button in mobile viewport  js code
+// loading page
+setTimeout(function () {
+    document.querySelector("#loader").style.display = "none";
+    document.querySelector(".content").style.display = "block";
+}, 500);
 
+// scroling in page
+
+function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+// navbar button in mobile viewport  js code
 let navBtn = document.querySelector(".dropDown");
 let myList = document.querySelector(".links");
 
@@ -11,8 +22,6 @@ navBtn.onclick = function () {
         document.querySelector("body").style.overflow = "auto";
     }
 };
-
-//  navbar color chang in scrolling js code
 
 let navbar = document.querySelector("header");
 
@@ -29,12 +38,26 @@ function navTransition() {
         }
     }
 }
-
 navTransition();
 
 window.onscroll = function () {
     navTransition();
 };
+
+// comments section slider js code
+
+var swiper = new Swiper(".secondSwiper", {
+    spaceBetween: 30,
+    centeredSlides: true,
+    autoplay: {
+        delay: 2700,
+        disableOnInteraction: false,
+    },
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+});
 
 //  OUR JOURNAL slider js code
 
@@ -43,6 +66,7 @@ var swiper = new Swiper(".mySwiper", {
     grabCursor: true,
     centeredSlides: true,
     slidesPerView: "auto",
+    initialSlide: 2,
     coverflowEffect: {
         rotate: 50,
         stretch: 0,
