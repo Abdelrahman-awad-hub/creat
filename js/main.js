@@ -1,4 +1,8 @@
+/**
+ * A function that is called when the user clicks on the button.
+ */
 // loading page
+/* Hiding the loader after 500ms. */
 setTimeout(function () {
     document.querySelector("#loader").style.display = "none";
     document.querySelector(".content").style.display = "block";
@@ -11,6 +15,7 @@ function scrollToTop() {
 }
 
 // navbar button in mobile viewport  js code
+/* This is a function that is called when the user clicks on the button. */
 let navBtn = document.querySelector(".dropDown");
 let myList = document.querySelector(".links");
 
@@ -25,6 +30,12 @@ navBtn.onclick = function () {
 
 //  navbar color chang in scrolling js code
 
+/**
+ * If the user has scrolled past half the height of the window, add the class "bg-normal" to the navbar
+ * and remove the class "transparent". If the user has scrolled back up to the top of the page, add the
+ * class "transparent" to the navbar and remove the class "bg-normal".
+ * </code>
+ */
 let navbar = document.querySelector("header");
 
 function navTransition() {
