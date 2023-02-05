@@ -23,6 +23,8 @@ navBtn.onclick = function () {
     }
 };
 
+//  navbar color chang in scrolling js code
+
 let navbar = document.querySelector("header");
 
 function navTransition() {
