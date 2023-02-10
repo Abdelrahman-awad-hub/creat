@@ -1,0 +1,43 @@
+@import "../abstracts/variables";
+
+#loader {
+    background-color: #000;
+    position: relative;
+    z-index: 999999999;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.loder {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    box-shadow: 0px 4px 0px $main-color;
+    background: transparent;
+    animation: loder 0.5s linear infinite;
+}
+.tex {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    color: #eee;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    line-height: 200px;
+    font-size: 2em;
+    background: transparent;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+@keyframes loder {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-360deg);
+    }
+}

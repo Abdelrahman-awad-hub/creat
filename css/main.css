@@ -1,22 +1,3 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: "Dosis", Sans-serif;
-  direction: ltr;
-}
-
-a,
-a:hover,
-a:focus,
-a:active {
-  text-decoration: none;
-  color: inherit;
-}
-
 header {
   width: 100%;
   border-bottom: 2px solid rgba(153, 153, 153, 0.6);
@@ -148,25 +129,6 @@ header nav .links li a {
   transform: translate(100%, -14px);
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: "Dosis", Sans-serif;
-  direction: ltr;
-}
-
-a,
-a:hover,
-a:focus,
-a:active {
-  text-decoration: none;
-  color: inherit;
-}
-
 footer {
   background-color: #000000;
 }
@@ -199,25 +161,6 @@ li::before {
 }
 li:not(.active):hover::before {
   right: 50%;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: "Dosis", Sans-serif;
-  direction: ltr;
-}
-
-a,
-a:hover,
-a:focus,
-a:active {
-  text-decoration: none;
-  color: inherit;
 }
 
 #letsTalk {
@@ -288,25 +231,6 @@ a:active {
   color: inherit;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: "Dosis", Sans-serif;
-  direction: ltr;
-}
-
-a,
-a:hover,
-a:focus,
-a:active {
-  text-decoration: none;
-  color: inherit;
-}
-
 .main-btn {
   font-size: 19px;
   color: #fff;
@@ -348,25 +272,6 @@ a:active {
 }
 .main-btn:hover span:visited {
   color: #e9204f;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: "Dosis", Sans-serif;
-  direction: ltr;
-}
-
-a,
-a:hover,
-a:focus,
-a:active {
-  text-decoration: none;
-  color: inherit;
 }
 
 #loader {
@@ -413,25 +318,6 @@ a:active {
     transform: rotate(-360deg);
   }
 }
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: "Dosis", Sans-serif;
-  direction: ltr;
-}
-
-a,
-a:hover,
-a:focus,
-a:active {
-  text-decoration: none;
-  color: inherit;
-}
-
 .mySwiper {
   width: 100%;
 }
@@ -460,25 +346,6 @@ a:active {
 }
 .mySwiper .swiper-pagination span {
   background-color: #e9204f;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: "Dosis", Sans-serif;
-  direction: ltr;
-}
-
-a,
-a:hover,
-a:focus,
-a:active {
-  text-decoration: none;
-  color: inherit;
 }
 
 section .title {
