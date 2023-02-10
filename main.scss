@@ -1,14 +1,13 @@
 @import "./sass/abstracts/variables";
 @import "./sass/abstracts/functions";
 @import "./sass/abstracts/variables";
-
-@import "./sass/layout/header";
-@import "./sass/layout/footer";
-@import "./sass/layout/forms";
 @import "./sass/layout/global-rulse";
 
 @import "./sass/components/buttons";
 @import "./sass/components/loader";
 @import "./sass/components/slider";
 
+@import "./sass/layout/header";
 @import "./sass/pages/home";
+@import "./sass/layout/forms";
+@import "./sass/layout/footer";
