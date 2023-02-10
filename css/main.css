@@ -502,16 +502,16 @@ section .title h3 {
   padding-right: 0;
   padding-left: 0;
   cursor: pointer;
-  transition: border 1s, height 1s;
+  transition: border 1s, height 0.5s;
   overflow: hidden;
 }
 .features .cards .featureCard .info {
-  transition: transform 1s;
+  transition: transform 0.5s;
 }
 .features .cards .featureCard .info .shape {
   font-size: 70px !important;
   margin-bottom: 2rem;
-  transition: color 1s;
+  transition: color 0.5s;
 }
 .features .cards .featureCard .arrow {
   transform: translate(0, 320%);
